@@ -2,10 +2,10 @@
   "name": "githubaction",
   "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bump": "npm version"
+    "bump": "npm version",
+    "build": "ncc build src/action.js -o dist"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/mathiasgheno/githubaction/issues"
   },
-  "homepage": "https://github.com/mathiasgheno/githubaction#readme"
+  "homepage": "https://github.com/mathiasgheno/githubaction#readme",
+  "dependencies": {
+    "axios": "^0.25.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.1"
+  }
 }
