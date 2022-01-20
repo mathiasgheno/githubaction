@@ -3062,6 +3062,14 @@ module.exports.wrap = wrap;
 
 /***/ }),
 
+/***/ 5:
+/***/ ((module) => {
+
+module.exports = eval("require")("@ctions/core");
+
+
+/***/ }),
+
 /***/ 975:
 /***/ ((module) => {
 
@@ -3160,9 +3168,11 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const axios = __nccwpck_require__(545);
+const core = __nccwpck_require__(5);
 
 async function main() {
-  const response = await axios.get('https://futuramaapi.herokuapp.com/api/characters/dr-zoidberg/1')
+  const chars = core.getInput('character') || 'dr-zoidberg';
+  const response = await axios.get(`https://futuramaapi.herokuapp.com/api/characters/${chars}/1`);
   console.log(response.data[0]);
 }
 
