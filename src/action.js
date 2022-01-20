@@ -1,5 +1,5 @@
 const axios = require('axios');
-const core = require('@ctions/core');
+const core = require('@actions/core');
 
 async function main() {
   const chars = core.getInput('character') || 'dr-zoidberg';
