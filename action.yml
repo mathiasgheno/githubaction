@@ -2,6 +2,11 @@ name: 'hello world'
 description: 'Lets go!'
 author: 'mathias gheno <mathiasgheno@gmail.com>'
 
+inputs:
+  character:
+    description: 'Futurama Character'
+    default: 'dr-zoidberg'
+
 runs:
   using: 'node12'
   main: 'dist/index.js'
