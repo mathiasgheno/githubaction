@@ -7,6 +7,10 @@ inputs:
     description: 'Futurama Character'
     default: 'dr-zoidberg'
 
+outputs:
+  quote:
+    description: 'result'
+
 runs:
   using: 'node12'
   main: 'dist/index.js'
